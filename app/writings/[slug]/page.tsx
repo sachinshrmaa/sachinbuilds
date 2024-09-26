@@ -3,6 +3,7 @@ import getPostContent from "../../../utils/getPostContent";
 import moment from "moment";
 import Link from "next/link";
 import Markdown from "markdown-to-jsx";
+import "../writings.css";
 
 export const generateStaticParams = async () => {
   const posts = getPosts("writings");
@@ -20,7 +21,8 @@ export default function PostDetail(props: any) {
       <div className="mb-1">
         <h1 className="text-2xl font-semibold">Sachin Builds</h1>
       </div>
-      <div className="my-2">
+
+      <div className="mt-2 mb-5">
         <Link href="/" className="hover:text-blue-800">
           SachinBuilds
         </Link>
@@ -28,15 +30,16 @@ export default function PostDetail(props: any) {
         <Link href="/writings" className="hover:text-blue-800">
           Writings
         </Link>
-        /
-        <Link href="/writings" className="text-blue-600 hover:text-blue-800 underline">
+        /{" "}
+        <Link href={`/writings/${slug}`} className="text-blue-600 hover:text-blue-800 underline">
           {slug}
         </Link>
       </div>
-      <h1>{post.data.title}</h1>
-      <small> {moment(post.data.date).format("MMMM D, YYYY")}</small>
 
-      <article className="prose post-body">
+      <h1 className="mt-2 text-2xl md:text-3xl font-bold ">{post.data.title}</h1>
+      <small className="text-slate-600"> {moment(post.data.date).format("MMMM D, YYYY")}</small>
+
+      <article className="prose post-body mt-2">
         <Markdown>{post.content}</Markdown>
       </article>
     </div>

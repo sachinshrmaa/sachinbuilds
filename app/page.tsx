@@ -1,6 +1,12 @@
 import Link from "next/link";
 import React from "react";
 
+export const metadata = {
+  title: "Sachin Builds",
+  description:
+    "I'm an engineer by degree, working as an Associate Software Engineer at a small startup, where we are building PAM",
+};
+
 export default function Home() {
   return (
     <div>
@@ -12,12 +18,19 @@ export default function Home() {
         <div className="col-span-3 md:col-span-2">
           <p className="mb-3">
             Namaste 🙏, I'm an engineer by degree, working as an Associate Software Engineer at a
-            small startup, where we are building PAM (Privileged Access Management) software called
-            Authnull.
+            small startup, where we are building PAM (Privileged Access Management) software called{" "}
+            <Link
+              href="https://authnull.com/"
+              target="_blank"
+              className="text-blue-600 hover:text-blue-800 underline"
+            >
+              Authnull
+            </Link>
+            .
           </p>
           <p className="mb-3">
-            When I am not working at my day job, I like to build software, day trade the stock
-            market, read books, and talk. I'm also working on my side project,{" "}
+            When I am not working on Authnull, I like to build software, day trade the stock market,
+            read books, and talk. I'm also working on my side project,{" "}
             <Link
               href="https://contri.sachinbuilds.in"
               className="text-blue-600 hover:text-blue-800 underline"
@@ -65,7 +78,7 @@ export default function Home() {
         </div>
         <div className="col-span-2 md:col-span-1">
           <Link
-            href="#"
+            href="/bookshelf"
             className="text-blue-600 hover:text-blue-800 font-semibold text-md md:text-lg"
           >
             <span className="text-xl md:text-2xl"> → </span> Bookshelf
@@ -77,7 +90,8 @@ export default function Home() {
 
         <div className="col-span-2 md:col-span-1">
           <Link
-            href="#"
+            href="https://tbc.sachinbuilds.in/"
+            target="_blank"
             className="text-blue-600 hover:text-blue-800 font-semibold text-md md:text-lg"
           >
             <span className="text-xl md:text-2xl"> → </span> Teaching
