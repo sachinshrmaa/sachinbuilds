@@ -9,6 +9,7 @@ export default function Writings() {
       <div className="mb-1">
         <h1 className="text-2xl font-semibold">Sachin Builds</h1>
       </div>
+
       <div className="mt-2">
         <Link href="/" className="hover:text-blue-800">
           SachinBuilds
@@ -18,17 +19,20 @@ export default function Writings() {
           Writings
         </Link>
       </div>
-      <h1 className="my-4">Writings</h1>
+
+      <h1 className="my-4 font-semibold">All Writings</h1>
+
       <div>
         {posts.map((post) => (
-          <div>
+          <div className="mb-6">
+            <small className="block text-slate-500">{post.date}</small>
             <Link
               href={`/writings/${post.slug}`}
-              className="text-blue-600 hover:text-blue-800 underline"
+              className="text-blue-600 hover:text-blue-800 underline text-lg font-semibold"
             >
               {post.title}
             </Link>
-            <p>{post.subtitle}</p>
+            <p className="text-slate-500">{post.subtitle}</p>
           </div>
         ))}
       </div>
