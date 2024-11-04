@@ -100,6 +100,19 @@ export default function Home() {
             As much as I like to learn new skills, I like to teach.
           </p>
         </div>
+
+        <div className="col-span-2 md:col-span-1">
+          <Link
+            href="/writings"
+            className="text-blue-600 hover:text-blue-800 font-semibold text-md md:text-lg"
+          >
+            <span className="text-xl md:text-2xl"> → </span> Day Trading
+          </Link>
+          <p className="text-md text-slate-600 leading-5 mt-2">
+            There is no trader who has not made a loss, and I'm no exception. But one thing I like
+            to do is to learn from my mistakes.
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -23,8 +23,8 @@ export default function Writings() {
       <h1 className="my-4 font-semibold">All Writings</h1>
 
       <div>
-        {posts.map((post) => (
-          <div className="mb-6">
+        {posts.map((post, index) => (
+          <div className="mb-6" key={index}>
             <small className="block text-slate-500">{post.date}</small>
             <Link
               href={`/writings/${post.slug}`}
