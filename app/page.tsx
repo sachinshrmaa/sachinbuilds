@@ -4,116 +4,69 @@ import React from "react";
 export const metadata = {
   title: "Sachin Builds",
   description:
-    "I'm an engineer by degree, working as an Associate Software Engineer at a small startup, where we are building PAM",
+    "I'm an engineer turned teacher by degree, working as an Associate Software Engineer at a small startup, where we are building PAM",
 };
 
 export default function Home() {
   return (
     <div>
-      <div className="mb-1">
-        <h1 className="text-2xl font-semibold">Sachin Builds</h1>
-      </div>
-
-      <div className="grid grid-cols-3 py-5 mb-3 md:mb-5">
-        <div className="col-span-3 md:col-span-2">
-          <p className="mb-3">
-            Namaste 🙏, I'm an engineer by degree, working as an Associate Software Engineer at a
-            small startup, where we are building PAM (Privileged Access Management) software called{" "}
-            <Link
-              href="https://authnull.com/"
-              target="_blank"
-              className="text-blue-600 hover:text-blue-800 underline"
-            >
-              Authnull
-            </Link>
-            .
-          </p>
-          <p className="mb-3">
-            When I am not working on Authnull, I like to build software, day trade the stock market,
-            read books, and talk. I'm also working on my side project,{" "}
-            <Link
-              href="https://contri.sachinbuilds.in"
-              className="text-blue-600 hover:text-blue-800 underline"
-            >
-              Contri
-            </Link>{" "}
-            — An expense-sharing and tracking tool.
-          </p>
-          <p className="mb-3">
-            I also send newsletters.{" "}
-            <Link
-              href="https://contri.sachinbuilds.in"
-              className="text-blue-600 hover:text-blue-800 underline"
-            >
-              {" "}
-              Feel free to Sign Up.
-            </Link>
-          </p>
+      <div className="mb-1 navbar">
+        <h1 className="nav-link">Sachin Builds</h1>
+        <div className="nav-menu">
+          <Link href="#" className="nav-link">
+            Bookshelf
+          </Link>
+          <Link href="#" className="nav-link">
+            Bookshelf
+          </Link>
+          <Link href="#" className="nav-link">
+            Bookshelf
+          </Link>
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-6 md:gap-10 mb-5">
-        <div className="col-span-2 md:col-span-1">
+      <div className="py-5 mb-3 md:mb-5">
+        <p className="mb-3">
+          Namaste 🙏, I'm an engineer turned teacher by profession, working as a
+          Skill Instructor at{" "}
           <Link
-            href="/writings"
-            className="text-blue-600 hover:text-blue-800 font-semibold text-md md:text-lg"
-          >
-            <span className="text-xl md:text-2xl"> → </span> Writings
-          </Link>
-          <p className="text-md text-slate-600 leading-5 mt-2">
-            A collection of my thoughts, experiences, and learnings.
-          </p>
-        </div>
-        <div className="col-span-2 md:col-span-1">
-          <Link
-            href="#"
-            className="text-blue-600 hover:text-blue-800 font-semibold text-md md:text-lg"
-          >
-            <span className="text-xl md:text-2xl"> → </span> Building Software
-          </Link>
-          <p className="text-md text-slate-600 leading-5 mt-2">
-            As a part of my work as software engineer, I build software, and I share my learnings
-            here.
-          </p>
-        </div>
-        <div className="col-span-2 md:col-span-1">
-          <Link
-            href="/bookshelf"
-            className="text-blue-600 hover:text-blue-800 font-semibold text-md md:text-lg"
-          >
-            <span className="text-xl md:text-2xl"> → </span> Bookshelf
-          </Link>
-          <p className="text-md text-slate-600 leading-5 mt-2">
-            A curated list of books & essays that have influenced me.
-          </p>
-        </div>
-
-        <div className="col-span-2 md:col-span-1">
-          <Link
-            href="https://tbc.sachinbuilds.in/"
+            href="https://msu.edu.in/"
             target="_blank"
-            className="text-blue-600 hover:text-blue-800 font-semibold text-md md:text-lg"
+            className="text-blue-600 hover:text-blue-800 underline"
           >
-            <span className="text-xl md:text-2xl"> → </span> Teaching
-          </Link>
-          <p className="text-md text-slate-600 leading-5 mt-2">
-            As much as I like to learn new skills, I like to teach.
-          </p>
-        </div>
-
-        <div className="col-span-2 md:col-span-1">
+            Medhavi Skill University
+          </Link>{" "}
+          , a UGC-recognized state university in Sikkim, pioneering
+          industry-integrated, skill-competency-based higher education to
+          enhance student employability in line with the National Education
+          Policy 2020.
+        </p>
+        <img
+          src="./photo1.jpg"
+          alt="Group photo with school students"
+          style={{
+            borderRadius: "8px",
+            marginBottom: "16px",
+          }}
+        />
+        <p className="mb-3">
+          When I am not working at my day job, I like to build software, day
+          trade the stock market, read books, and talk. I'm also working on my
+          side project, tradeLog — A trading journal with analytics integrated.
+        </p>
+        <p className="mb-3">
+          I also send newsletters.{" "}
           <Link
-            href="/writings"
-            className="text-blue-600 hover:text-blue-800 font-semibold text-md md:text-lg"
+            href="https://contri.sachinbuilds.in"
+            className="text-blue-600 hover:text-blue-800 underline"
           >
-            <span className="text-xl md:text-2xl"> → </span> Day Trading
+            {" "}
+            Feel free to Sign Up.
           </Link>
-          <p className="text-md text-slate-600 leading-5 mt-2">
-            There is no trader who has not made a loss, and I'm no exception. But one thing I like
-            to do is to learn from my mistakes.
-          </p>
-        </div>
+        </p>
       </div>
+
+      <hr />
     </div>
   );
 }
