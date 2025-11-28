@@ -3,25 +3,12 @@ import React from "react";
 
 export const metadata = {
   title: "Sachin Builds",
-  description:
-    "I'm an engineer turned teacher by degree, working as an Associate Software Engineer at a small startup, where we are building PAM",
+  description: "I'm an engineer turned teacher by degree.",
 };
 
 export default function Home() {
   return (
     <div>
-      <div className="mb-1 navbar">
-        <h1 className="nav-link">Sachin Builds</h1>
-        <div className="nav-menu">
-          <Link href="#" className="nav-link">
-            Bookshelf
-          </Link>
-          <Link href="#" className="nav-link">
-            Teaching
-          </Link>
-        </div>
-      </div>
-
       <div className="py-5 mb-3 md:mb-5">
         <p className="mb-3">
           Namaste 🙏, I'm an engineer turned teacher by profession, working as a
@@ -41,10 +28,7 @@ export default function Home() {
         <img
           src="./photo1.jpg"
           alt="Group photo with school students"
-          style={{
-            borderRadius: "8px",
-            marginBottom: "16px",
-          }}
+          className="rounded-lg mb-6 hover:scale-105 transition-transform duration-300"
         />
         <p className="mb-3">
           When I am not working at my day job, I like to build software, day
@@ -64,6 +48,26 @@ export default function Home() {
       </div>
 
       <hr />
+
+      <div className="py-5 flex gap-3">
+        <a
+          href="https://instagram.com/sachinshrmaa"
+          target="_blank"
+          className="flex"
+        >
+          ig
+          <img src="/elink.svg" alt="external link" />
+        </a>
+
+        <a
+          href="mailto:sachinbuilds@zohomail.com"
+          target="_blank"
+          className="flex"
+        >
+          email
+          <img src="/elink.svg" alt="external link" />
+        </a>
+      </div>
     </div>
   );
 }
