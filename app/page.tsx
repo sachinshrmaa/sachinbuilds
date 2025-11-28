@@ -17,10 +17,7 @@ export default function Home() {
             Bookshelf
           </Link>
           <Link href="#" className="nav-link">
-            Bookshelf
-          </Link>
-          <Link href="#" className="nav-link">
-            Bookshelf
+            Teaching
           </Link>
         </div>
       </div>
