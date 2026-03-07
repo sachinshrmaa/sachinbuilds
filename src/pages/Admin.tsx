@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import AdminPosts from "@/components/admin/AdminPosts";
+import AdminBooks from "@/components/admin/AdminBooks";
+import AdminMessages from "@/components/admin/AdminMessages";
 
 const Admin = () => {
   const [loading, setLoading] = useState(true);
@@ -37,9 +41,17 @@ const Admin = () => {
           Sign Out
         </Button>
       </div>
-      <p className="text-muted-foreground">
-        Welcome to the admin dashboard. Manage your posts, books, and messages here.
-      </p>
+
+      <Tabs defaultValue="posts">
+        <TabsList className="mb-6">
+          <TabsTrigger value="posts">Posts</TabsTrigger>
+          <TabsTrigger value="books">Books</TabsTrigger>
+          <TabsTrigger value="messages">Messages</TabsTrigger>
+        </TabsList>
+        <TabsContent value="posts"><AdminPosts /></TabsContent>
+        <TabsContent value="books"><AdminBooks /></TabsContent>
+        <TabsContent value="messages"><AdminMessages /></TabsContent>
+      </Tabs>
     </div>
   );
 };
