@@ -76,7 +76,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
       <footer className="border-t border-border">
         <div className="max-w-2xl mx-auto px-6 py-6 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Your Name. All rights reserved.
+          © {new Date().getFullYear()} sachinbuilds. All rights reserved.
         </div>
       </footer>
     </div>
