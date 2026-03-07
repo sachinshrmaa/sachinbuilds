@@ -1,12 +1,61 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Link } from "react-router-dom";
+import { posts } from "@/data/posts";
+import { ArrowRight } from "lucide-react";
 
 const Index = () => {
+  const recentPosts = posts.slice(0, 3);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="space-y-16">
+      {/* Hero */}
+      <section className="pt-8">
+        <h1 className="text-4xl md:text-5xl leading-tight tracking-tight mb-6">
+          Writer, builder,<br />
+          <span className="italic text-primary">curious mind.</span>
+        </h1>
+        <p className="text-muted-foreground leading-relaxed max-w-lg">
+          I write about software, teaching, trading, and whatever else I'm thinking about.
+          I also share the books I'm reading along the way.
+        </p>
+      </section>
+
+      {/* Recent writing */}
+      <section>
+        <div className="flex items-center justify-between mb-8">
+          <h2 className="text-2xl tracking-tight">Recent Writing</h2>
+          <Link
+            to="/blog"
+            className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
+          >
+            All posts <ArrowRight size={14} />
+          </Link>
+        </div>
+
+        <div className="space-y-8">
+          {recentPosts.map((post) => (
+            <Link
+              key={post.id}
+              to={`/blog/${post.slug}`}
+              className="block group"
+            >
+              <div className="flex items-baseline justify-between gap-4 mb-1">
+                <h3 className="text-lg font-serif group-hover:text-primary transition-colors">
+                  {post.title}
+                </h3>
+                <span className="text-xs text-muted-foreground whitespace-nowrap">
+                  {new Date(post.date).toLocaleDateString("en-US", {
+                    month: "short",
+                    year: "numeric",
+                  })}
+                </span>
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {post.excerpt}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
     </div>
   );
 };
