@@ -19,7 +19,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <header className="border-b border-border">
         <div className="max-w-2xl mx-auto px-6 py-5 flex items-center justify-between">
           <Link to="/" className="font-serif text-xl tracking-tight text-foreground hover:text-primary transition-colors">
-            Your Name
+            sachinbuilds
           </Link>
 
           {/* Desktop nav */}
