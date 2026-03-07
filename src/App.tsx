@@ -10,6 +10,8 @@ import BlogPost from "./pages/BlogPost";
 import Books from "./pages/Books";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import AdminLogin from "./pages/AdminLogin";
+import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
