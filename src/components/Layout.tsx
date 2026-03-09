@@ -18,8 +18,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <div className="min-h-screen flex flex-col">
       <header className="border-b border-border">
         <div className="max-w-2xl mx-auto px-6 py-5 flex items-center justify-between">
-          <Link to="/" className="font-serif text-xl tracking-tight text-foreground hover:text-primary transition-colors">
-            sachinbuilds
+          <Link
+            to="/"
+            className="font-serif text-xl tracking-tight text-foreground hover:text-primary transition-colors"
+          >
+            SachinBuilds
           </Link>
 
           {/* Desktop nav */}
