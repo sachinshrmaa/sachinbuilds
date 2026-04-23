@@ -10,11 +10,11 @@ const About = () => {
       {/* Profile photo + intro */}
       <div className="flex flex-col sm:flex-row gap-8 mb-12">
         <div className="sm:w-1/3 shrink-0">
-          <img
+          {/* <img
             src={profilePhoto}
             alt="Profile photo"
             className="w-full aspect-square object-cover rounded-lg"
-          />
+          /> */}
           <p className="text-xs text-muted-foreground mt-2 italic">
             Replace with your photo
           </p>

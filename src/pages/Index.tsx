@@ -21,7 +21,7 @@ const Index = () => {
     <div className="space-y-16">
       <section className="pt-8">
         <h1 className="text-4xl md:text-5xl leading-tight tracking-tight mb-6">
-          Engineer, Teacher,
+          engineer, teacher,
           <br />
           <span className="italic text-primary">curious mind.</span>
         </h1>
