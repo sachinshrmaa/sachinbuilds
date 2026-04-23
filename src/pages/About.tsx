@@ -22,7 +22,7 @@ const About = () => {
         <div className="space-y-4 text-foreground leading-relaxed">
           <p>
             I'm a builder and writer interested in the intersection of
-            technology, markets, and education. I spend my days writing
+            technology, markets, sports, and education. I spend my days writing
             software, thinking about how to teach complex ideas simply, and
             occasionally trading.
           </p>
