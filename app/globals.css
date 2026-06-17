@@ -1,26 +1,84 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-paper: #fbf9f5;
+  --color-paper-raised: #ffffff;
+  --color-ink: #1c1a17;
+  --color-ink-muted: #6b6358;
+  --color-ink-faint: #a39c8f;
+  --color-hairline: #e7e2d9;
+  --color-accent: #b5502a;
+  --color-accent-soft: #f1e3da;
+
+  --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    color-scheme: light;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--color-accent-soft);
+    color: var(--color-ink);
+  }
+
+  a {
+    text-underline-offset: 3px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .prose-article {
+    font-size: 0.9375rem;
+    --tw-prose-body: var(--color-ink);
+    --tw-prose-headings: var(--color-ink);
+    --tw-prose-links: var(--color-accent);
+    --tw-prose-bold: var(--color-ink);
+    --tw-prose-quotes: var(--color-ink-muted);
+    --tw-prose-quote-borders: var(--color-hairline);
+    --tw-prose-code: var(--color-ink);
+    --tw-prose-hr: var(--color-hairline);
+    --tw-prose-bullets: var(--color-ink-faint);
+    --tw-prose-counters: var(--color-ink-muted);
+    --tw-prose-th-borders: var(--color-hairline);
+    --tw-prose-td-borders: var(--color-hairline);
+  }
+
+  .prose-article :where(h1, h2, h3, h4) {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .prose-article .heading-anchor {
+    text-decoration: none;
+  }
+
+  .prose-article pre {
+    border: 1px solid var(--color-hairline);
+    background-color: var(--color-paper-raised) !important;
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+  }
+
+  .prose-article :not(pre) > code {
+    font-family: var(--font-mono);
+    background-color: var(--color-accent-soft);
+    border-radius: 0.25rem;
+    padding: 0.15em 0.4em;
+    font-weight: 400;
+  }
 }

@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# sachinbuilds
 
-## Getting Started
+A fast, markdown-based personal site: writings and a bookshelf, both
+statically generated at build time.
 
-First, run the development server:
+## Content
+
+- `content/writings/*.md` — blog posts. Frontmatter: `title`, `date`
+  (`YYYY-MM-DD`), `excerpt`, `tags` (optional string array), `draft`
+  (optional bool). A draft is fully excluded from the production build,
+  the writings list, the sitemap, and the RSS feed — but still renders
+  locally under `npm run dev` (with a "Draft" badge) so you can preview it
+  before publishing. Remove the `draft` line to publish.
+- `content/bookshelf/*.md` — books. Frontmatter: `title`, `author`,
+  `status` (`reading` | `read` | `want-to-read`), `rating` (optional,
+  1-5), `link` (optional), `date` (optional). Body is optional notes,
+  rendered as markdown.
+
+To publish, add a new `.md` file to the relevant folder and deploy — there
+is no database or admin login.
+
+## Configuration
+
+Site name, description, contact email, and social links live in
+[`lib/site-config.ts`](lib/site-config.ts). Update `url` there once you
+have a production domain.
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Routes
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `/` — home
+- `/writings`, `/writings/[slug]` — blog
+- `/bookshelf` — books
+- `/contact`
+- `/sitemap.xml`, `/robots.txt`, `/feed.xml` — generated automatically from content
