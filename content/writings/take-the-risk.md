@@ -1,8 +1,8 @@
 ---
-title: "A draft in progress"
-date: "2026-06-15"
+title: "Take the F**KING RISK!"
+date: "2026-05-31"
 excerpt: "This post is still being written — it won't appear on the live site until the draft flag is removed."
-tags: ["meta"]
+tags: ["personal"]
 draft: true
 ---
 
