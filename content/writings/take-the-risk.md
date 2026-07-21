@@ -1,19 +1,28 @@
 ---
 title: "Take the F**KING RISK!"
 date: "2026-05-31"
-excerpt: "This post is still being written — it won't appear on the live site until the draft flag is removed."
+excerpt: "I want you to take this video/article as a reminder - that TAKE THE F**KING RISK."
 tags: ["personal"]
-draft: true
 ---
+One thing I've learned over the years — there is no right or wrong, it's just perspective. *Woh kehte hain na, mera 6 aapko 9 dikhega*. There's no stupid idea. There's no "billion-dollar idea." There's just the idea you act on and the one you don't.
 
-This is an example of a draft post. It exists in `content/writings/` like
-any other file, but the `draft: true` line in its frontmatter keeps it out
-of the production build entirely — it's absent from `/writings`, the
-sitemap, and the RSS feed, and visiting its URL on the deployed site
-returns a 404.
+I had this little idea once of building an app, which I never built fully; someone else did, and it’s a billion-dollar company right now.
 
-While running `npm run dev` locally, though, it still renders normally
-(with a small "Draft" badge) so it can be read and edited in context.
+The point that I’m trying to make here is, ***TAKE THE F\*\*KING RISK.***
+- Post the content you've been sitting on.
+- Take the trip. You'll never have more time than right now — next year will also be "too busy."
+- Build the project that keeps showing up in your head at 2am. Someone with half your skills is building it right now.
+- Ask your crush out; the worst that will happen is you’ll end up as friends.
 
-To publish it, just remove the `draft: true` line — or delete this file
-once you've written your own.
+But hey, it’s better than nothing, right? You know where I am going with this. Take the RISK.
+
+I don’t remember any regrets for taking the risk, so there’s nothing I’ll say/write about it, but I do remember the regrets of not taking the shot. 
+
+I once found out my crush had liked me back the whole time. Neither of us said anything. She's now happily dating this ugly f**ker — *sorry, this handsome gentleman.* We'll never know what could've been, because neither of us moved.
+
+And the list of regrets goes on… 
+
+The worst part isn't the regrets. It's that five years from now, you'll probably be reading another post just like this one, nodding along, and still not doing it. 
+
+So, I want you to take this video/article as a reminder - that ***TAKE THE F\*\*KING RISK.***
+
