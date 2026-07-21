@@ -24,13 +24,15 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const plainDescription = siteConfig.description.replace(/<[^>]*>/g, "");
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default: `${siteConfig.name} — ${siteConfig.shortName}`,
     template: `%s · ${siteConfig.shortName}`,
   },
-  description: siteConfig.description,
+  description: plainDescription,
   alternates: {
     canonical: "/",
     types: {
@@ -42,12 +44,12 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     siteName: siteConfig.shortName,
     title: siteConfig.name,
-    description: siteConfig.description,
+    description: plainDescription,
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
-    description: siteConfig.description,
+    description: plainDescription,
   },
 };
 

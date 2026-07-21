@@ -17,8 +17,15 @@ export default async function Home() {
           <h1 className="font-serif text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
             {siteConfig.name}
           </h1>
-          <p className="mt-3 max-w-lg text-ink-muted">{siteConfig.description}</p>
-          <p className="mt-3 max-w-lg text-ink-muted">{siteConfig.bio}</p>
+          <p
+            className="mt-3 max-w-2xl text-ink-muted [&_a]:font-medium [&_a]:text-accent [&_a]:hover:underline"
+            dangerouslySetInnerHTML={{ __html: siteConfig.description }}
+          />
+          <div className="mt-4 max-w-2xl space-y-4 text-ink-muted">
+            {siteConfig.bio.split(/\n\s*\n/).map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
         </section>
 
         <section>

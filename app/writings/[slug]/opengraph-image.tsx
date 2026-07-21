@@ -34,17 +34,17 @@ export default async function Image({
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "80px",
-          backgroundColor: "#fbf9f5",
-          color: "#1c1a17",
+          backgroundColor: "#ffffff",
+          color: "#0f172a",
         }}
       >
-        <div style={{ fontSize: 28, color: "#b5502a", fontWeight: 600 }}>
+        <div style={{ fontSize: 28, color: "#052140", fontWeight: 600 }}>
           {siteConfig.shortName}
         </div>
         <div style={{ fontSize: 56, fontWeight: 600, lineHeight: 1.2, maxWidth: 950 }}>
           {title}
         </div>
-        <div style={{ fontSize: 24, color: "#6b6358" }}>{siteConfig.name}</div>
+        <div style={{ fontSize: 24, color: "#475569" }}>{siteConfig.name}</div>
       </div>
     ),
     size

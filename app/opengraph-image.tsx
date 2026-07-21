@@ -17,13 +17,13 @@ export default function Image() {
           justifyContent: "center",
           gap: 24,
           padding: "80px",
-          backgroundColor: "#fbf9f5",
-          color: "#1c1a17",
+          backgroundColor: "#ffffff",
+          color: "#0f172a",
         }}
       >
         <div style={{ fontSize: 64, fontWeight: 600 }}>{siteConfig.name}</div>
-        <div style={{ fontSize: 28, color: "#6b6358", maxWidth: 900 }}>
-          {siteConfig.description}
+        <div style={{ fontSize: 28, color: "#475569", maxWidth: 900 }}>
+          {siteConfig.description.replace(/<[^>]*>/g, "")}
         </div>
       </div>
     ),

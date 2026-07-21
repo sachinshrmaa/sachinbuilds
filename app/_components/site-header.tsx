@@ -16,7 +16,7 @@ export function SiteHeader() {
         <div className="flex h-14 items-center justify-between gap-3">
           <Link
             href="/"
-            className="font-serif text-base font-semibold tracking-tight text-ink"
+            className="font-sans text-base font-semibold tracking-tight text-ink"
           >
             {siteConfig.shortName}
           </Link>

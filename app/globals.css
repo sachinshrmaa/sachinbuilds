@@ -2,14 +2,14 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-paper: #fbf9f5;
-  --color-paper-raised: #ffffff;
-  --color-ink: #1c1a17;
-  --color-ink-muted: #6b6358;
-  --color-ink-faint: #a39c8f;
-  --color-hairline: #e7e2d9;
-  --color-accent: #b5502a;
-  --color-accent-soft: #f1e3da;
+  --color-paper: #ffffff;
+  --color-paper-raised: #f8fafc;
+  --color-ink: #0f172a;
+  --color-ink-muted: #475569;
+  --color-ink-faint: #64748b;
+  --color-hairline: #e2e8f0;
+  --color-accent: #052140;
+  --color-accent-soft: rgba(5, 33, 64, 0.08);
 
   --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
